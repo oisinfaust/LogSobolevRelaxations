@@ -24,6 +24,9 @@ ___
 
 The module `LogSobolevRelaxations` contains no hardcoded reference to a particular solver.
 However, many of the examples in this project use the solver [Mosek](https://www.mosek.com). Mosek is a commercial software package, but it is possible to obtain a [free academic licence](https://www.mosek.com/products/academic-licenses) if you meet certain criteria.
+In order to use Mosek, you should put this licence in your home directory in the following location:
+`~/mosek/mosek.lic`
+
 It is, of course, also possible to use this project with a different semidefinite program solver, as long as it has a [MathOptInterface](https://github.com/jump-dev/MathOptInterface.jl) interface.
 ___
 
