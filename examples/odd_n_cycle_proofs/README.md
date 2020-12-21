@@ -1,19 +1,17 @@
 # Sum-of-Squares proofs for the n-cycle
 
-A logarithmic Sobolev for the simple random walk on the n-cycle has the form
+A logarithmic Sobolev inequality for the simple random walk on the n-cycle has the form
 <p align=center><img src=../img/ls.png></p>
 The best possible constant α for which the above holds is called the logarithmic Sobolev constant of the n-cycle.
 In order to find certifiable lower bounds on the log-Sobolev constant, we consider a stronger inequality, based on the Taylor series of (1+t)^2
 log(1+t), which only involves polynomials.
-This directory contains exact sum-of-squares proofs that this stronger inequality holds with α = (1 - cos(2pi/n))/2, for modest values of `n`.
+This directory contains exact sum-of-squares proofs that this stronger inequality holds with α = (1 - cos(2pi/n))/2, for modest values of n.
 This α is in fact the best possible constant, since it happens to be half of the spectral gap of this chain, which is known to upper bound the log-Sobolev constant.
 For more details, please refer to our paper [TODO].
 
 Here is a brief description of the files in this directory:
 - `generate_proofs.jl` is a Julia script which sets up and solves a sum-of-squares relaxation, and outputs a proof.
 - `cycle_basis.jl` contains some code used by `generate_proofs.jl` (in particular, it defines the polynomial basis we will use).
-- The subdirectory `proofs` contains files of the form `sos_proof_{n}.sage`, where `n` is an odd integer. 
-These files contain the data needed to obtain a sum-of-squares proof, in the form of an LDL^t decomposition and a polynomial basis.
 - `verify_cycle_proof.sage` is a Sage script which verifies our claim, taking a number of proof files as input.
 
 Some of this functionality is described in more depth below.
@@ -23,6 +21,7 @@ Some of this functionality is described in more depth below.
 This requires a working installation of [SageMath](https://www.sagemath.org), version >= 9.2.
 
 The script `verify_cycle_proof.sage` should be run with an argument `n`, for which there exists a proof file `proofs/sos_proof_{n}.sage` (this path is relative to the directory `verify_cycle_proof.sage`).
+These files contain the data needed to obtain a sum-of-squares proof, in the form of an LDL^t decomposition and a polynomial basis.
 ```bash
 $ sage verify_cycle_proof.sage 7
 n = 7: Success - proof is valid
@@ -64,16 +63,17 @@ Calculating this polynomial is what makes up the bulk of the processing for this
 
 ## Generating the proofs
 ---
-**Note -installing required packages**
+**Note - installing required packages**
+
 The following assumes that certain necessary dependencies (a subset of those listed in `examples/Project.toml`) have already been added manually to your default Julia environment. Alternatively, you can download all dependencies into the `examples` environment in one step as follows:
 ```bash
-$ julia --project=@EXAMPLES_PATH -e "using Pkg; Pkg.instantiate()"
+$ julia --project=EXAMPLES_PATH -e "using Pkg; Pkg.instantiate()"
 ```
 where `EXAMPLES_PATH` is a path to the `LogSobolevRelaxations/examples` folder.
 If you choose to do this, command line calls to Julia in the rest of this section should use the ``--project`` flag as follows:
 
 ```bash
-$ julia --project=@EXAMPLES_PATH ...
+$ julia --project=EXAMPLES_PATH ...
 ```
 
 ---
