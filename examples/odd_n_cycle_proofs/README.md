@@ -33,10 +33,10 @@ n = 7: Success - proof is valid
 n = 9: Success - proof is valid
 n = 11: Success - proof is valid
 ```
-When n is large , e.g. 17, 19, 21, expect this verification to take up many minutes or even several hours of CPU time.
+When n is large, e.g. 17, 19, 21, expect this verification to take up many minutes or even several hours of CPU time.
 
 Proofs may be obtained using the script `generate_proofs.jl` (as explained in [Generating the proofs](#Generating-the-proofs)).
-Alternatively, a zipped `proofs` folder containing some precomputed `sos_proof_{n}.sage` files is available for download from [TODO].
+Alternatively, a zipped `proofs` folder containing some precomputed `sos_proof_{n}.sage` files is available for download from [here](https://github.com/oisinfaust/LogSobolevRelaxations/releases/download/v0.1.0/proofs.zip).
 
 ### The verification process
 
