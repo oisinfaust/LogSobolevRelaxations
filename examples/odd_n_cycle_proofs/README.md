@@ -7,7 +7,10 @@ In order to find certifiable lower bounds on the log-Sobolev constant, we consid
 log(1+t), which only involves polynomials.
 This directory contains exact sum-of-squares proofs that this stronger inequality holds with α = (1 - cos(2pi/n))/2, for modest values of n.
 This α is in fact the best possible constant, since it happens to be half of the spectral gap of this chain, which is known to upper bound the log-Sobolev constant.
-For more details, please refer to our paper [Sum-of-Squares proofs of logarithmic Sobolev inequalities on finite Markov chains](https://arxiv.org/abs/2101.04988) (Oisín Faust and Hamza Fawzi, arXiv:2101.04988).
+For more details, please refer to our paper
+
+[Sum-of-Squares proofs of logarithmic Sobolev inequalities on finite Markov chains](https://arxiv.org/abs/2101.04988)
+(Oisín Faust and Hamza Fawzi, arXiv:2101.04988).
 
 Here is a brief description of the files in this directory:
 - `generate_proofs.jl` is a Julia script which sets up and solves a sum-of-squares relaxation, and outputs a proof.
