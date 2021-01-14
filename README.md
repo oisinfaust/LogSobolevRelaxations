@@ -1,7 +1,7 @@
 # LogSobolevRelaxations
 
 This repository contains code to obtain rigourous and accurate lower bounds on the logarithmic Sobolev constants of finite Markov chains.
-It accompanies the paper [TODO].
+It accompanies the paper [Sum-of-Squares proofs of logarithmic Sobolev inequalities on finite Markov chains](https://arxiv.org/abs/2101.04988) (Oisín Faust and Hamza Fawzi, arXiv:2101.04988).
 
 The project defines an `import`able module named LogSobolevRelaxations.
 It also contains some examples of the use of this module.
