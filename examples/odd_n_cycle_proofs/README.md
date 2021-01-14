@@ -7,7 +7,7 @@ In order to find certifiable lower bounds on the log-Sobolev constant, we consid
 log(1+t), which only involves polynomials.
 This directory contains exact sum-of-squares proofs that this stronger inequality holds with α = (1 - cos(2pi/n))/2, for modest values of n.
 This α is in fact the best possible constant, since it happens to be half of the spectral gap of this chain, which is known to upper bound the log-Sobolev constant.
-For more details, please refer to our paper [TODO].
+For more details, please refer to our paper [Sum-of-Squares proofs of logarithmic Sobolev inequalities on finite Markov chains](https://arxiv.org/abs/2101.04988) (Oisín Faust and Hamza Fawzi, arXiv:2101.04988).
 
 Here is a brief description of the files in this directory:
 - `generate_proofs.jl` is a Julia script which sets up and solves a sum-of-squares relaxation, and outputs a proof.
@@ -117,7 +117,7 @@ This is not to be considered in any way part of a proof; it is only used to allo
 ```julia
 check_pos_def(Q::Matrix{RealCyclotomicFieldElem{N}}) where N
 ```
-- A function which will return a carefully chosen symmetry-adapted polynomial basis. The return type will be a `Vector` of `LogSobolevRelaxations.GramBasis{RealCyclotomicFieldElem{N}}` objects. Each `GramBasis` corresponds to a block of the full block-diagonal Gram matrix. They also have a nontrivial sparsity pattern. For more details, please refer to our paper [TODO], and the code itself.
+- A function which will return a carefully chosen symmetry-adapted polynomial basis. The return type will be a `Vector` of `LogSobolevRelaxations.GramBasis{RealCyclotomicFieldElem{N}}` objects. Each `GramBasis` corresponds to a block of the full block-diagonal Gram matrix. They also have a nontrivial sparsity pattern. For more details, please refer to our paper, and to the code itself.
 ```julia
 get_cycle_basis(x::Vector{DynamicPolynomials.PolyVar{true}})
 ```
